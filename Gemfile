@@ -17,20 +17,18 @@ ruby '2.3.1'
   gem 'reform', '>= 2.2.0'
   gem 'reform-rails'
   gem 'dry-validation'
+  gem 'rails_12factor' #for heroku
 
   gem 'pg_search' #postgres search
   gem 'wicked_pdf'
   gem 'wkhtmltopdf-binary' #wicked_pdf binary
-  gem 'doorkeeper' #oauth
+  # gem 'doorkeeper' #oauth
   gem 'refile', github: "refile/refile", require: 'refile/rails'
   gem 'refile-mini_magick'
   gem 'refile-postgres', '~> 1.4'
   gem 'sinatra', github: 'sinatra/sinatra', branch: 'master'
   gem 'rack-protection', github: 'sinatra/rack-protection'
 
-group :production do
-  gem 'rails_12factor' #for heroku
-end
 
 group :test do
   gem 'minitest-rails-capybara'
