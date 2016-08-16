@@ -1,0 +1,16 @@
+<% if @post.errors.any? %>
+  <div class="alert alert-danger" role="alert">
+      <% @post.errors.full_messages.each do |msg| %>
+      <%= msg %><br>
+      <% end %>
+  </div>
+<% end %>
+
+<%= simple_form_for @post do |f|%>
+  <%= f.input :title%>
+  <%= f.input :category%>
+  <%= f.input :date%>
+  <%= f.input :text%>
+  <%= f.input :author%>
+  <%= f.button :submit%>
+<%end%>
