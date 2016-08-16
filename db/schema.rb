@@ -10,9 +10,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160816004809) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "articles", force: :cascade do |t|
+    t.string   "title"
+    t.string   "subtitle"
+    t.string   "publication"
+    t.date     "date"
+    t.string   "link"
+    t.text     "text"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "books", force: :cascade do |t|
+    t.string   "title"
+    t.string   "sub_title"
+    t.string   "full_title"
+    t.integer  "year"
+    t.string   "contributors"
+    t.string   "publisher"
+    t.string   "pages"
+    t.integer  "height"
+    t.integer  "width"
+    t.string   "language"
+    t.text     "description"
+    t.string   "amazon_link"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "username"
+    t.string   "email"
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
 end
