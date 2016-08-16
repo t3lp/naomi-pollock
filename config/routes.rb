@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :users
 
   get 'home' => 'home#welcome', as: :home
+  get 'about' => 'home#about', as: :about
 
   get 'sign_in' => 'sessions#new', as: :sign_in
   post 'sign_in' => 'sessions#create'

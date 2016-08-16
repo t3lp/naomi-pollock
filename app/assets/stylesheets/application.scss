@@ -1,12 +1,25 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat:400,700';
 @import 'https://fonts.googleapis.com/css?family=Lato:300,400,400i,700';
 
-$blue = rgb(0,58,183);
-$green = rgb(0,152,86);
+$blue: rgb(0,58,183);
+$green: rgb(0,152,86);
 
-h1, h2, h3, h4, h5, h6,{
+h1{
   font-family: 'Montserrat', sans-serif;
+  color: $green;
+  text-align: center;
 }
  p{
    font-family: 'Lato', sans-serif;
+}
+
+li{
+  font-family: 'Montserrat', sans-serif;
+  color: $green;
+  list-style-type: none;
+  display: inline-block;
+}
+
+ul{
+  text-align: center;
 }
