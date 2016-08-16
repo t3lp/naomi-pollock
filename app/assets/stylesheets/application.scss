@@ -23,3 +23,15 @@ li{
 ul{
   text-align: center;
 }
+
+a:link, a:visited {
+   color: $green;
+   padding: 14px 25px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+}
+
+a:hover, a:active {
+  color: $blue;
+}

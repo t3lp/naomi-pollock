@@ -1,0 +1,22 @@
+<% if @book.errors.any? %>
+  <div class="alert alert-danger" role="alert">
+      <% @book.errors.full_messages.each do |msg| %>
+      <%= msg %><br>
+      <% end %>
+  </div>
+<% end %>
+
+<%= simple_form_for @book do |f|%>
+  <%= f.input :title%>
+  <%= f.input :subtitle%>
+  <%= f.input :year%>
+  <%= f.input :contributors%>
+  <%= f.input :publisher%>
+  <%= f.input :language%>
+  <%= f.input :pages%>
+  <%= f.input :description%>
+  <%= f.input :amazon_link%>
+  <%= f.input :height%>
+  <%= f.input :width%>
+  <%= f.button :submit%>
+<%end%>
