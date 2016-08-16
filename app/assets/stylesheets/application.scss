@@ -35,3 +35,25 @@ a:link, a:visited {
 a:hover, a:active {
   color: $blue;
 }
+
+.book_wrapper{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: flex-start;
+}
+
+.book{
+  max-width: 200px;
+  max-height: 250px;
+  margin: 40px;
+  img{
+    height: 100%;
+    width: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 0;
+  }
+}

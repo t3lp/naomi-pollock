@@ -1,0 +1,43 @@
+<table>
+  <tr>
+    <th>Full Title</th>
+    <td><%= @book.full_title%></td>
+  </tr>
+  <tr>
+    <th> Title </th>
+    <td><%= @book.title%></td>
+  </tr>
+  <tr>
+    <th> Subtitle </th>
+    <td><%= @book.sub_title%></td>
+  </tr>
+  <tr>
+    <th> Year </th>
+    <td><%= @book.year%></td>
+  </tr>
+  <tr>
+    <th> Contributors </th>
+    <td><%= @book.contributors%></td>
+  </tr>
+  <tr>
+    <th> Publisher </th>
+    <td><%= @book.publisher%></td>
+  </tr>
+  <tr>
+    <th> Language </th>
+    <td><%= @book.language%></td>
+  </tr>
+  <tr>
+    <th> Description </th>
+    <td><%= @book.description%></td>
+  </tr>
+  <tr>
+    <th> Link </th>
+    <td><%=link_to "Buy Now", @book.amazon_link%></td>
+  </tr>
+</table>
+
+<% if @book.photo_link.nil?%>
+  <%else%>
+    <%= image_tag @book.photo_link %>
+<%end%>

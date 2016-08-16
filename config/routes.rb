@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+
+
   namespace :admin do
-    get 'dashboard/dashboard'
+    get 'dashboard' => 'dashboard#dashboard', as: :dashboard
   end
 
   resources :articles
@@ -8,6 +10,8 @@ Rails.application.routes.draw do
   resources :photos
   resources :posts
   resources :users
+  resources :essays
+  resources :lectures
 
   get 'home' => 'home#welcome', as: :home
   get 'about' => 'home#about', as: :about
