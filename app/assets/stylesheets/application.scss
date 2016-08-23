@@ -8,33 +8,51 @@ h1{
   font-family: 'Montserrat', sans-serif;
   color: $green;
   text-align: center;
+  font-weight: lighter;
+  letter-spacing: .5em;
+  a:link, a:visited,  {
+     color: $green;
+     padding: 14px 25px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+  }
+
+  a:hover, a:active {
+    color: $blue;
+  }
 }
- p{
+p{
    font-family: 'Lato', sans-serif;
 }
 
 li{
   font-family: 'Montserrat', sans-serif;
-  color: $green;
+  font-weight: lighter;
+  letter-spacing: .35em;
+  color: $blue;
   list-style-type: none;
   display: inline-block;
+  font-size: 12px;
+  a:link, a:visited {
+     color: $blue;
+     padding: 14px 25px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+  }
+
+  a:hover, a:active {
+    color: $green;
+  }
 }
 
 ul{
   text-align: center;
+  margin-top: -20px;
 }
 
-a:link, a:visited {
-   color: $green;
-   padding: 14px 25px;
-   text-align: center;
-   text-decoration: none;
-   display: inline-block;
-}
 
-a:hover, a:active {
-  color: $blue;
-}
 
 .book_wrapper{
   display:flex;
@@ -46,8 +64,8 @@ a:hover, a:active {
 }
 
 .book{
-  max-width: 200px;
-  max-height: 250px;
+  max-width: 350px;
+  max-height: 450px;
   margin: 40px;
   img{
     height: 100%;
