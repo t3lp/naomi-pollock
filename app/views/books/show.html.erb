@@ -1,43 +1,26 @@
-<table>
-  <tr>
-    <th>Full Title</th>
-    <td><%= @book.full_title%></td>
-  </tr>
-  <tr>
-    <th> Title </th>
-    <td><%= @book.title%></td>
-  </tr>
-  <tr>
-    <th> Subtitle </th>
-    <td><%= @book.sub_title%></td>
-  </tr>
-  <tr>
-    <th> Year </th>
-    <td><%= @book.year%></td>
-  </tr>
-  <tr>
-    <th> Contributors </th>
-    <td><%= @book.contributors%></td>
-  </tr>
-  <tr>
-    <th> Publisher </th>
-    <td><%= @book.publisher%></td>
-  </tr>
-  <tr>
-    <th> Language </th>
-    <td><%= @book.language%></td>
-  </tr>
-  <tr>
-    <th> Description </th>
-    <td><%= @book.description%></td>
-  </tr>
-  <tr>
-    <th> Link </th>
-    <td><%=link_to "Buy Now", @book.amazon_link%></td>
-  </tr>
-</table>
+  <div class="row">
+        <div class="col-md-5">
+          <div class="book_wrapper">
+            <div class="book2">
+              <% if @book.photo_link.nil?%>
+                <%else%>
+                  <%= image_tag @book.photo_link %>
+              <%end%>
+            </div>
+          </div>
+        </div>
+    <div class="col-md-7">
+      <h2> <%= @book.title.upcase%> </h2>
+      <h3> <%= @book.sub_title%> </h3>
+      <h3> <%= @book.year%> </h3>
+      <p> <%= @book.description%> </p>
+      <p> <%= @book.contributors%> </p>
+      <p><%= @book.publisher%></p>
+      <p><%= @book.language%></p> </br>
 
-<% if @book.photo_link.nil?%>
-  <%else%>
-    <%= image_tag @book.photo_link %>
-<%end%>
+      <div class="link">
+      <%=link_to "Buy Now", @book.amazon_link %>
+      </div>
+    </div>
+  </div>
+  </div>

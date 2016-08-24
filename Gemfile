@@ -13,6 +13,8 @@ ruby '2.3.1'
   gem 'minitest-rails'
   gem 'simple_form'
   gem 'font-awesome-sass'
+  gem 'bootstrap-sass'
+
 
   gem 'reform', '>= 2.2.0'
   gem 'reform-rails'
