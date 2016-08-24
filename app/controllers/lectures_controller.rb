@@ -40,6 +40,6 @@ class LecturesController < ApplicationController
   end
 
   def lecture_params
-    params.require(:lecture).permit(:title, :publication, :year, :publisher, :book_author, :link)
+    params.require(:lecture).permit(:title, :institution, :date, :link, :description, :year)
   end
 end
