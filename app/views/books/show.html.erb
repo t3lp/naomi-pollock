@@ -10,17 +10,16 @@
           </div>
         </div>
     <div class="col-md-7">
-      <h2> <%= @book.title.upcase%> </h2>
-      <h3> <%= @book.sub_title%> </h3>
-      <h3> <%= @book.year%> </h3>
+      <h3> <%= @book.full_title%> </h3>
+      <h4> <%= @book.year%> </h4>
       <p> <%= @book.description%> </p>
-      <p> <%= @book.contributors%> </p>
-      <p><%= @book.publisher%></p>
-      <p><%= @book.language%></p> </br>
 
-      <div class="link">
+      <p> <%= @book.contributors%> </p>
+
+
+      <h4><div class="link">
       <%=link_to "Buy Now", @book.amazon_link %>
-      </div>
+      </div></h4>
     </div>
   </div>
   </div>
