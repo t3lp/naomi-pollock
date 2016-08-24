@@ -14,6 +14,7 @@ ruby '2.3.1'
   gem 'simple_form'
   gem 'font-awesome-sass'
   gem 'bootstrap-sass'
+  gem 'instagram'
 
 
   gem 'reform', '>= 2.2.0'

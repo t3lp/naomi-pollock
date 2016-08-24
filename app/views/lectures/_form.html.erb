@@ -1,0 +1,17 @@
+<% if @lecture.errors.any? %>
+  <div class="alert alert-danger" role="alert">
+      <% @lecture.errors.full_messages.each do |msg| %>
+      <%= msg %><br>
+      <% end %>
+  </div>
+<% end %>
+
+<%= simple_form_for @lecture do |f|%>
+  <%= f.input :title%>
+  <%= f.input :institution%>
+  <%= f.input :date%>
+  <%= f.input :link%>
+  <%= f.input :description%>
+  <%= f.input :year%>
+  <%= f.button :submit%>
+<%end%>
