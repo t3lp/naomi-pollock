@@ -16,7 +16,7 @@ h1{
   font-family: 'Montserrat', sans-serif;
   color: $green;
   text-align: center;
-  font-size: 24px;
+  font-size: 3em;
   font-weight: lighter;
   letter-spacing: .5em;
   a:link, a:visited,  {
@@ -44,7 +44,10 @@ h2, h3, h4, h5, {
      display: inline-block;
   }
 
-  a:hover, a:active {
+  a:hover{
+    color: $blue;
+  }
+  a:active{
     color: $blue;
   }
 }
@@ -61,9 +64,9 @@ li{
   list-style-type: none;
   display: inline-block;
   font-size: 12px;
-  a:link, a:visited {
+  a:link, {
      color: $blue;
-    padding: 20px;
+     padding: 20px;
      text-align: center;
      text-decoration: none;
      display: inline-block;
@@ -78,7 +81,9 @@ ul{
   text-align: center;
 }
 
-
+.active{
+  color: $green;
+}
 
 .book_wrapper{
   display:flex;

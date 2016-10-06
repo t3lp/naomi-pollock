@@ -15,6 +15,7 @@ ruby '2.3.1'
   gem 'font-awesome-sass'
   gem 'bootstrap-sass'
   gem 'instagram'
+  gem 'active_link_to'
 
 
   gem 'reform', '>= 2.2.0'
