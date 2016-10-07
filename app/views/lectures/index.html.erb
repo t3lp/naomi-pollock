@@ -1,84 +1,16 @@
-<% @lectures.each do |lecture| %>
-  <div class="lecture_box">
-    <div class="lecture_title">
-      <%= lecture.title%>
-    </div>
-    <div class="lecture_publication">
-        <%= lecture.institution%>
-        <%= lecture.date%>
-    </div>
-  </div>
-<% end %>
+
 <div class="container">
   <div class="lecture_box_wrapper">
-    <div class="lecture_box">
-      <div class="lecture_title">
-        Title
+    <% @lectures.each do |lecture| %>
+      <div class="lecture_box">
+        <div class="lecture_title">
+          <%= lecture.title%>
+        </div>
+        <div class="lecture_publication">
+            <%= lecture.institution%><br>
+            <%= lecture.year%>
+        </div>
       </div>
-      <div class="lecture_publication">
-          institution <br>
-          2016
-      </div>
-    </div>
-
-    <div class="lecture_box">
-      <div class="lecture_title">
-        Title
-      </div>
-      <div class="lecture_publication">
-          institution<br>
-          2016
-      </div>
-    </div>
-
-    <div class="lecture_box">
-      <div class="lecture_title">
-        Title
-      </div>
-      <div class="lecture_publication">
-          institution<br>
-          2016
-      </div>
-    </div>
-
-    <div class="lecture_box">
-      <div class="lecture_title">
-        Title
-      </div>
-      <div class="lecture_publication">
-          institution<br>
-          2016
-      </div>
-    </div>
-
-    <div class="lecture_box">
-      <div class="lecture_title">
-        Title
-      </div>
-      <div class="lecture_publication">
-          institution<br>
-          2016
-      </div>
-    </div>
-
-    <div class="lecture_box">
-      <div class="lecture_title">
-        Title
-      </div>
-      <div class="lecture_publication">
-          institution<br>
-          2016
-      </div>
-    </div>
-
-    <div class="lecture_box">
-      <div class="lecture_title">
-        Title
-      </div>
-      <div class="lecture_publication">
-          institution<br>
-          2016
-      </div>
-    </div>
+    <% end %>
   </div>
 </div>
