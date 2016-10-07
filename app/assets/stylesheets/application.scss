@@ -175,15 +175,14 @@ ul{
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
 }
 .lecture_box{
   background-color: $blue;
   height: 300px;
   width: 300px;
-  margin-top: 40px;
   padding: 20px;
   display:flex;
  flex-direction: column;
@@ -191,6 +190,8 @@ ul{
  justify-content: space-between;
  align-content: space-between;
  align-items: center;
+ margin: 18px; 
+
 }
 
 .lecture_box:hover {
@@ -209,4 +210,24 @@ ul{
   text-align: center;
   font-family: 'Lato', sans-serif;
   font-weight: lighter;
+}
+
+.photo_box{
+  height: 350px;
+  width: 350px;
+
+  img{
+    width: 100%;
+    padding: 20px;
+  }
+
+}
+
+.photo_box_wrapper{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: center;
 }
