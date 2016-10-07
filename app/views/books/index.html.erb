@@ -1,7 +1,9 @@
-<div class="book_wrapper">
-  <% @books.each do |book| %>
-  <div class="book">
-    <a href="/books/<%=book.id%>"><%= image_tag book.photo_link%></a>
+<div class="container">
+  <div class="book_wrapper">
+    <% @books.each do |book| %>
+    <div class="book">
+      <a href="/books/<%=book.id%>"><%= image_tag book.photo_link%></a>
+    </div>
+    <% end %>
   </div>
-  <% end %>
 </div>
