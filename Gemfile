@@ -17,6 +17,7 @@ ruby '2.3.1'
   gem 'instagram'
   gem 'active_link_to'
   gem 'insta_scrape'
+  gem 'ckeditor'
 
 
 

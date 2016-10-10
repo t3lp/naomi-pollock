@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="blog_wrapper">
+
+      <% @posts.each do |post| %>
+          <div class="post_box">
+            <h1><%=post.title %></h1>
+
+              <%=post.text %>
+          
+
+            </div>
+        <% end %>
+
+    </div>
+</div>
