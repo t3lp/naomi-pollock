@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161007045401) do
+ActiveRecord::Schema.define(version: 20161007161900) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,22 @@ ActiveRecord::Schema.define(version: 20161007045401) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.string   "photo_link"
+  end
+
+  create_table "ckeditor_assets", force: :cascade do |t|
+    t.string   "data_id",                      null: false
+    t.string   "data_filename",                null: false
+    t.integer  "data_size"
+    t.string   "data_content_type"
+    t.integer  "assetable_id"
+    t.string   "assetable_type",    limit: 30
+    t.string   "type",              limit: 30
+    t.integer  "width"
+    t.integer  "height"
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.index ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
+    t.index ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
   end
 
   create_table "essays", force: :cascade do |t|
@@ -82,6 +98,7 @@ ActiveRecord::Schema.define(version: 20161007045401) do
     t.string   "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text     "content"
   end
 
   create_table "users", force: :cascade do |t|
