@@ -1,9 +1,13 @@
 <div class="container">
   <div class="book_wrapper">
     <% @books.each do |book| %>
-    <div class="book">
-      <a href="/books/<%=book.id%>"><%= image_tag book.photo_link%></a>
-    </div>
+      <a href="/books/<%=book.id%>">
+          <div class="book">
+            <%= image_tag book.photo_link%>
+            <h2 class="hidden_text upper"><%=book.title %></h2></br>
+            <h2 class= "hidden_text"><%= book.year%></h2>
+          </div>
+      </a>
     <% end %>
   </div>
 </div>

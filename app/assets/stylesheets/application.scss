@@ -104,8 +104,31 @@ ul{
     width: 100%;
     align-items: center;
   }
+  .hidden_text{
+    display: none;
+  }
 }
 
+.book:hover{
+  height: 300px;
+  width: 200px;
+  background-color: $green;
+  img{
+    display: none;
+  }
+  .hidden_text{
+    display: inline;
+    color: white;
+    font-size: 1.4em;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+}
+.centered{
+  align-self: center;
+}
 .book2{
   max-width: 350px;
   max-height: 450px;
@@ -223,6 +246,7 @@ ul{
   }
 
 }
+
 
 .photo_box_wrapper{
   display:flex;
