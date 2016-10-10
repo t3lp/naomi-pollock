@@ -2,15 +2,17 @@
 <div class="container">
   <div class="lecture_box_wrapper">
     <% @lectures.each do |lecture| %>
-      <div class="lecture_box">
-        <div class="lecture_title">
-          <%= lecture.title%>
-        </div>
-        <div class="lecture_publication">
-            <%= lecture.institution%><br>
-            <%= lecture.year%>
-        </div>
+      <a href="<%=lecture.link%>">
+        <div class="lecture_box">
+          <div class="lecture_title">
+            <%= lecture.title%>
+          </div>
+          <div class="lecture_publication">
+              <%= lecture.institution%><br>
+              <%= lecture.year%>
+          </div>
       </div>
+      </a>
     <% end %>
   </div>
 </div>
