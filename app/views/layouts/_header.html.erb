@@ -9,5 +9,7 @@
       <li><%= active_link_to "BLOGS", posts_path%></li>
       <li><%= active_link_to "ABOUT", about_path%></li>
       <li><%= active_link_to "INSTAGRAM", photos_path%></li>
-      <li><%= active_link_to "SEARCH", root_path%></li>
+      <li id="search-block"><%= form_tag(posts_path, :method => "get", id: "search-form") do %>
+          <%= text_field_tag :search, params[:search], placeholder: "     S E A R C H" %>
+          <% end %></li>
     </ul>
